@@ -1,7 +1,0 @@
-git pull // 지금은 생략 가능
-
-git add .
-
-git commit -m "메세지"
-
-git push
