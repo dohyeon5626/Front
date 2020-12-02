@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline-style: none;
+}
+*::selection {
+  background: rgba(255, 238, 51, 0.99);
+}
+header {
+  max-width: 100%;
+  min-width: 1160px;
+  height: 60px;
+  padding: 0 80px 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  z-index: 2;
+}
+header > a {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header > .linkBar {
+  display: flex;
+  position: relative;
+  left: -13px;
+}
+header > .linkBar > a {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 14px 0 13px;
+  text-decoration: none;
+}
+header > .linkBar > a:hover > p {
+  border-bottom: 2px solid #1e1e1e;
+}
+header > .linkBar > a > p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 58px;
+  color: #1e1e1e;
+  cursor: pointer;
+}
+header > div.linkBar > a > span {
+  width: 14px;
+  height: 14px;
+  background: url(people_icon.PNG) no-repeat;
+  background-position: center;
+  position: relative;
+  top: 1px;
+}
+header > div.languageBar > a.click {
+  font-weight: bold;
+}
+header > div.languageBar > a {
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #666;
+  margin: 0 9px 0 0;
+  position: relative;
+  left: -5px;
+}
+header > div.languageBar > a:hover {
+  font-weight: bold;
+}

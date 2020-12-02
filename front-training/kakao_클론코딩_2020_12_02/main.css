@@ -1,0 +1,296 @@
+main {
+  width: 100%;
+}
+main > div.video > video {
+  width: 100%;
+  min-width: 100%;
+}
+main > div.video {
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  position: relative;
+  min-width: 1700px;
+}
+main > div.video::after {
+  content: " ";
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+main > .video > .videoOver {
+  position: absolute;
+  left: 10.83333333rem;
+  top: 11.16666667rem;
+  right: auto;
+  bottom: auto;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  z-index: 2;
+}
+@font-face {
+  font-family: "NotoSans bold";
+  src: url("notokr-bold.woff");
+}
+@font-face {
+  font-family: "NotoSans light";
+  src: url("notokr-light.woff");
+}
+main > .video > .videoOver > p {
+  font-size: 56px;
+  line-height: 3.25rem;
+  margin-bottom: 17px;
+  font-weight: 700;
+  font-family: "NotoSans bold";
+  color: #fff;
+}
+main > div.KakaoCard {
+  width: 1903px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > div.KakaoCard > .Card {
+  background: #f4f4f4;
+  width: 1743px;
+  height: 53rem;
+  border-radius: 1.66666667rem;
+  margin: 100px 0 0 0;
+  position: relative;
+}
+main > .KakaoCard > .Card > .read {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+}
+
+main > .KakaoCard > .Card > .read > p {
+  font-size: 3.5rem;
+  line-height: 4.33333333rem;
+  letter-spacing: -0.125rem;
+  font-weight: 700;
+  font-family: "NotoSans bold";
+}
+main > .KakaoCard > .Card > .read > a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 30px 0 0 0;
+  font-family: "NotoSans bold";
+  color: #1e1e1e;
+  font-size: 1.33333333rem;
+  line-height: 2.33333333rem;
+  letter-spacing: -0.04166667rem;
+  font-weight: 1000;
+  position: relative;
+  padding: 0 0 0 37px;
+}
+main > .KakaoCard > .Card > .read > a:hover {
+  text-decoration: underline;
+}
+main > .KakaoCard > .c1 > .read > a::before {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  background-image: url(https://www.kakaocorp.com/resources/r202007/img/arr-r.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  content: " ";
+}
+main > .KakaoCard > .Card > video.a-video {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  width: 1690px;
+  border-radius: 0 0 1.66666667rem 1.66666667rem;
+  padding: 20px;
+}
+main > .KakaoCard > .c2 > .read > a::before {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  background-image: url(https://www.kakaocorp.com/resources/r202007/img/arr-rt.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  content: " ";
+}
+main > .KakaoCard > .c2 > img {
+  position: absolute;
+  left: auto;
+  bottom: 30px;
+  right: 0;
+  top: auto;
+  width: 100%;
+  border-radius: 0 0 1.66666667rem 1.66666667rem;
+  padding: 20px;
+  width: 73.66666667rem;
+  height: 29.83333333rem;
+}
+main > .bonusInformation {
+  width: 1903px;
+}
+main > .bonusInformation > .psp {
+  margin: 120px 80px 0 80px;
+  display: flex;
+  justify-content: space-between;
+}
+main > .bonusInformation > .psp > div {
+  width: 554px;
+  height: 123px;
+  margin: 0 0 18px 0;
+}
+main > .bonusInformation > .psp > .press > .first {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-family: "NotoSans light";
+  font-weight: bold;
+}
+main > .bonusInformation > .psp > .press > a {
+  color: #1e1e1e;
+  font-size: 20px;
+  font-family: "NotoSans bold";
+  margin: 0 0 8px 0;
+  text-decoration: none;
+}
+main > .bonusInformation > .psp > .press > a:hover {
+  text-decoration: underline;
+}
+main > .bonusInformation > .psp > .press > .last {
+  color: #666666;
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  line-height: 20px;
+  overflow: hidden;
+  font-family: "NotoSans light";
+}
+main > .bonusInformation > .psp > .stock > .first {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-family: "NotoSans light";
+  margin: 0 0 33px 0;
+  font-weight: bold;
+}
+main > .bonusInformation > .psp > .stock > .magic {
+  display: flex;
+  height: 46px;
+  align-items: center;
+}
+main > .bonusInformation > .psp > .stock > .magic > p.m1 {
+  color: #1e1e1e;
+  font-size: 32px;
+  font-family: "NotoSans bold";
+}
+main > .bonusInformation > .psp > .stock > .magic > p.m2 {
+  color: #ff0018;
+  font-size: 20px;
+  margin: 0 0 -12px 52px;
+  font-family: "NotoSans light";
+  font-weight: 600;
+  position: relative;
+}
+main > .bonusInformation > .psp > .stock > .magic > p.m2::before {
+  position: absolute;
+  left: -26px;
+  top: 7px;
+  content: " ";
+  width: 0px;
+  height: 0px;
+  border-top: 14px solid none;
+  border-bottom: 14px solid red;
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
+}
+main > .bonusInformation > .psp > .stock > .last {
+  color: #1e1e1e;
+  font-size: 12px;
+  margin: 28px 0 0 0;
+  line-height: 20px;
+  font-family: "NotoSans light";
+}
+main > .bonusInformation > .psp > .privacy > .first {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-family: "NotoSans light";
+  margin: 0 0 18px 0;
+  font-weight: bold;
+}
+main > .bonusInformation > .psp > .privacy > a {
+  color: #1e1e1e;
+  font-size: 20px;
+  font-family: "NotoSans bold";
+  text-decoration: none;
+}
+main > .bonusInformation > .psp > .privacy > a:hover {
+  text-decoration: underline;
+}
+main > .bonusInformation > .sts {
+  margin: 76px 80px 0 80px;
+  display: flex;
+  justify-content: space-between;
+}
+main > .bonusInformation > .sts > div {
+  width: 554px;
+  margin: 0 0 18px 0;
+}
+main > .bonusInformation > .sts > div > a.tag {
+  position: relative;
+  text-decoration: none;
+}
+main > .bonusInformation > .sts > div > a.tag > img {
+  width: 100%;
+  border-radius: 1.25rem;
+}
+main > .bonusInformation > .sts > div > a.tag::before {
+  position: absolute;
+  z-index: 1;
+  font-size: 14px;
+  font-family: "NotoSans light";
+  font-weight: bold;
+  text-decoration: none;
+  top: -280px;
+  left: 20px;
+}
+main > .bonusInformation > .sts > .service > a.tag::before {
+  content: "SERVICE";
+  color: #1e1e1e;
+}
+main > .bonusInformation > .sts > .tech > a.tag::before {
+  content: "TECH";
+  color: #ffffff;
+}
+main > .bonusInformation > .sts > .social > a.tag::before {
+  content: "SOCIAL IMPACT";
+  color: #1e1e1e;
+}
+main > .bonusInformation > .sts > div > a:hover > p.title {
+  text-decoration: underline;
+}
+main > .bonusInformation > .sts > div > a > p.title {
+  color: #1e1e1e;
+  font-size: 20px;
+  font-family: "NotoSans bold";
+  margin-top: 22px;
+}
+main > .bonusInformation > .sts > div > a > .read {
+  color: #666666;
+  font-size: 14px;
+  font-family: "NotoSans light";
+  margin-top: 8px;
+  text-decoration: none !important;
+}
