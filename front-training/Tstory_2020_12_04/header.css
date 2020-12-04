@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Noto Sans Medium";
+  src: url("font/NotoSansCJKkr-Medium.woff");
+}
+@font-face {
+  font-family: "Noto Sans Light";
+  src: url("font/NotoSansCJKkr-Light.woff");
+}
+body {
+  position: relative;
+}
+header {
+  width: 1903px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+header.mainHeader {
+  margin-top: 15px;
+  position: absolute;
+}
+header.scrollHeader {
+  background-color: white;
+  display: none;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
+}
+header > .headerLogo > .logo {
+  width: 24px;
+  height: 24px;
+  background-size: 200px 180px;
+  transition: 0 0.5s;
+  margin: 0 40px 0 60px;
+  position: relative;
+}
+header > .headerLogo > .logo > div {
+  width: 4.2px;
+  height: 4.2px;
+  border: 0.1px solid white;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+}
+header > .headerLogo > .logo > .one {
+  top: 0;
+  left: 0;
+}
+header > .headerLogo > .logo > .two {
+  top: 0;
+  left: 9px;
+}
+header > .headerLogo > .logo > .three {
+  top: 0;
+  left: 18px;
+}
+header > .headerLogo > .logo > .four {
+  top: 9px;
+  left: 9px;
+}
+header > .headerLogo > .logo > .five {
+  top: 18px;
+  left: 9px;
+}
+header.scollHeader > .headerLogo > .logo {
+  background-image: url(https://t1.daumcdn.net/tistory_admin/static/top/pc/img_common_tistory_200910.png);
+}
+header > .headerLink {
+  width: 205px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0 20px;
+}
+header > .headerLink > a {
+  text-decoration: none;
+  font-family: "Noto Sans Medium";
+  font-size: 16px;
+  letter-spacing: 0;
+}
+header.scrollHeader > .headerLink > a {
+  color: #000000;
+}
+header.mainHeader > .headerLink > a {
+  color: #ffffff;
+}

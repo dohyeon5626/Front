@@ -1,0 +1,91 @@
+main {
+  width: 1903px;
+}
+main > .mainSlide {
+  width: 1903px;
+  height: 640px;
+  background-color: rgb(197, 197, 197);
+}
+main > .mainStory {
+  height: 1000px;
+  background-color: #ffffff;
+  position: relative;
+}
+main > .mainStory > .Light {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 1333px;
+  background-image: url(https://t1.daumcdn.net/tistory_admin/static/top/pc/img_light.png);
+}
+main > .mainStory > .storyAdvertise {
+  position: absolute;
+  top: 156px;
+  left: 400px;
+}
+main > .mainStory > .storyAdvertise * {
+  font-size: 42px;
+  font-family: "Noto Sans Light";
+}
+main > .mainStory > .storyAdvertise > .firstTitle {
+  font-weight: normal;
+}
+main > .mainStory > .storyAdvertise > .secondTitle {
+  display: flex;
+  margin-top: -9px;
+  margin-bottom: 9px;
+}
+main > .mainStory > .storyAdvertise > .secondTitle > * {
+  letter-spacing: -1.4px;
+}
+main > .mainStory > .storyAdvertise > .secondTitle > .bold {
+  font-family: "Noto Sans Medium";
+  font-weight: 400;
+}
+main > .mainStory > .storyAdvertise > .secondTitle > p > span.hanzaTitle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(https://t1.daumcdn.net/tistory_admin/static/top/pc/txt_da.png);
+  margin: 3px 4px -10px 2px;
+}
+main > .mainStory > .storyAdvertise > .smallTitle {
+  font-size: 16px;
+  color: #777777;
+}
+main > .mainStory > .mainLastLink {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+main > .mainStory > .mainLastLink > a {
+  display: inline-block;
+  padding: 80px 0 0 0;
+  width: 150px;
+  height: 50px;
+  font-size: 0;
+  line-height: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 150px 50px;
+}
+main > .mainStory > .mainLastLink > .ibk {
+  background-image: url(https://img1.daumcdn.net/thumb/R300x100/?scode=mtistory2&fname=http%3A%2F%2Fcfile24.uf.tistory.com%2Fimage%2F9950223C5BB2C57B2225FF);
+}
+main > .mainStory > .mainLastLink > .hyundai {
+  background-image: url(https://img1.daumcdn.net/thumb/R300x100/?scode=mtistory2&fname=http%3A%2F%2Fcfile27.uf.tistory.com%2Fimage%2F99A6963C5BB2C5C32AB7FC);
+}
+main > .mainStory > .mainLastLink > .edu {
+  background-image: url(https://img1.daumcdn.net/thumb/R300x100/?scode=mtistory2&fname=http%3A%2F%2Fcfile21.uf.tistory.com%2Fimage%2F995901365BB2C53C27D162);
+}
+main > .mainStory > .mainLastLink > .cj {
+  background-image: url(https://img1.daumcdn.net/thumb/R300x100/?scode=mtistory2&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F993E8D385BB2C56B27DC1E);
+}
+main > .mainStory > .mainLastLink > .hyundaiCard {
+  background-image: url(https://img1.daumcdn.net/thumb/R300x100/?scode=mtistory2&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F9959C2335BB2C55318B849);
+}
+main > .mainStory > .mainLastLink > .paradise {
+  background-image: url(https://img1.daumcdn.net/thumb/R300x100/?scode=mtistory2&fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F9988F0395BB2C5B11F8B83);
+}
