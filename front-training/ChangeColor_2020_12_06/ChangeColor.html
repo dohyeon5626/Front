@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ChangeColor.css">
+    <title>change color</title>
+</head>
+<body>
+    <h1 id="helloworld">HelloWorld</h1>
+    <button id="button">change color red</button>
+    <script>
+        var helloworld = document.querySelector('#helloworld');
+        var button = document.querySelector('#button');
+        var i=0;
+        button.onclick = function(){
+            i++;
+            if(i%2==1){
+                helloworld.style.color = "red";
+            }
+            else{
+                helloworld.style.color = "black";
+            }
+        };
+    </script>
+</body>
+</html>

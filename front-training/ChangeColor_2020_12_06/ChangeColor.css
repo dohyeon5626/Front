@@ -1,0 +1,7 @@
+button {
+  border-radius: 100px;
+  outline-style: none;
+  font-size: 14px;
+  background-color: white;
+  border: 0.1px solid gray;
+}
