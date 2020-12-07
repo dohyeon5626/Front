@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="old.css">
+    <title>old calc</title>
+</head>
+<body>
+    <h1>나이 계산 프로그램 (2020년 기준)</h1>
+    <button class="start">나이 계산 시작</button>
+    <hr></hr>
+    <p class="result"></p>
+    <script>
+        var start = document.querySelector(".start");
+        start.onclick = function(){
+            var year = prompt("출생연도를 입력하세요");
+            year = 2020 - year + 1;
+            document.querySelector(".result").innerHTML = "당신의 나이는" + year + "살입니다";
+            // result라는 선택자를 가진 태그의 값을 바꿈
+        }
+    </script>
+</body>
+</html>
