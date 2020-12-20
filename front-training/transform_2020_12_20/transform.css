@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+}
+div {
+  border: 1px solid gray;
+}
+.big {
+  margin: 100px;
+  width: 200px;
+  height: 200px;
+}
+.small_1,
+.small_2,
+.small_3 {
+  width: 200px;
+  height: 200px;
+  background-color: chartreuse;
+}
+.small_1:hover {
+  transform: translate(50px, 50px);
+  transition: all 1s;
+}
+.small_2:hover {
+  transform: translate(150px, 50px) scale(1.5, 1.5);
+  /* 위처럼 두가지 속성을 같이 쓸 수 있음*/
+  transition: all 1s;
+}
+
+.small_3:hover {
+  transform: skew(20deg, -20deg);
+  transition: all 1s;
+}
