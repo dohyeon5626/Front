@@ -193,11 +193,11 @@ new Date(YYYY, MM, DD, hh, mm, ss, ms);
 객체지만, 순서가 더 중요할 때
 
 ```javascript
-let 배열이름 = {
+let 배열이름 = [
     값,
     값,
     값
-}
+]
 ```
 
 - 접근방식
