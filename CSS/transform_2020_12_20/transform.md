@@ -24,3 +24,20 @@ transform: func1 func2 func3 ...;
 /* 위와 같이 여러가지 속성을 쓸 수 있음 */
 ```
 
+2D 트랜스폼은 X축과 Y축 좌표만을 이용하여 조정할 수 있음
+3D 트랜스폼은 X축, Y축, Z축 좌표를 이용하여 조정함
+
+![img](https://t1.daumcdn.net/cfile/tistory/2731983757BBFF230D)
+
+| transform-origin            | 설명                                   | 개체 |
+| --------------------------- | -------------------------------------- | ---- |
+| backface-visibility         | 입체적인 뒷면의 가시성을 결정하는 속성 | 개체 |
+| rotateZ(n)                  | Z축으로 회전                           | 개체 |
+| rotate3d(x,y,z)             | 3축을 기준으로 회전                    | 개체 |
+| scaleZ()                    | Z축을 따라 요소를 늘림                 | 개체 |
+| perspective                 | 원근, 소실점, 투시도 법                | 부모 |
+| skewZ()                     | skewZ()는 사실 Z축이 없으며 3D가 아님  | 개체 |
+| perspective-origin          | 원근법에 대한 기준점을 설정            | 부모 |
+| transform=style:preserve-3d | 요소의 자식이 3D 공간에 배치           | 부모 |
+| transform-origin            | 회전을 시킬 축을 결정                  | 개체 |
+
