@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(241, 245, 214);
+  min-width: 900px;
+  min-height: 600px;
+}
+div.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(207, 164, 68);
+  box-shadow: 0px 0px 20px 1px gray;
+  border-radius: 0 0 10px 10px;
+  border-width: 0 10px 10px 10px;
+  border-color: #86714356;
+  border-style: solid;
+  position: relative;
+}
+div.main > p {
+  margin: 100px 0 100px 0;
+  font-size: 100px;
+  font-family: "Black Han Sans", sans-serif;
+  box-shadow: 0px 0px 10px 1px gray inset;
+  background-color: rgb(231, 219, 193);
+  width: 500px;
+  height: 130px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 10px;
+}
+div.main > button {
+  width: 500px;
+  height: 100px;
+  border-radius: 15px;
+  outline: none;
+  border-width: 0;
+  box-shadow: 0px 0px 10px 1px gray inset;
+  background-color: rgb(236, 218, 179);
+  margin: 20px 20px 50px 20px;
+  font-size: 50px;
+  font-weight: 300;
+  font-family: "Black Han Sans", sans-serif;
+}
+div > span.rule {
+  position: absolute;
+  background-color: rgb(236, 218, 179);
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: auto;
+  right: 0;
+  bottom: 0;
+}
+div > span.rule > p {
+  width: 150px;
+  left: 80px;
+  font-size: 15px;
+  font-family: "Black Han Sans", sans-serif;
+  color: rgb(58, 53, 53);
+  text-align: end;
+  margin-right: 10px;
+}
+div > span.rule > button {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  border-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+div > span.rule > button > img {
+  height: 100%;
+}
+div.rule_book_modal {
+  box-shadow: 0px 0px 20px 1px gray;
+  position: fixed;
+  border-radius: 10px;
+  width: 600px;
+  height: 400px;
+  top: 200px;
+  left: 650px;
+  background-color: rgb(236, 218, 179);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-width: 0;
+}
+div.rule_book_modal > p {
+  margin: 0 10px 0 10px;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 25px;
+}
+div.rule_book_modal > button {
+  position: absolute;
+  top: 2px;
+  left: auto;
+  right: 2px;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  background-color: rgb(248, 77, 77);
+  border-width: 0;
+  border-radius: 30px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  padding-top: 2px;
+}
+div.rule_book_modal > button::after,
+div.rule_book_modal > button::before {
+  display: none;
+}
+div.main > button:hover {
+  transition: all 0.4s;
+  background-color: rgb(240, 207, 137);
+  box-shadow: 1.2px 2px 20px 0.1px rgb(182, 182, 182) inset;
+}
