@@ -1,13 +1,13 @@
-var pan = new Array(20); // 판에 색깔 확인용 배열
-var panValue = new Array(20); // 가중치 저장용 배열
+var pan = new Array(21); // 판에 색깔 확인용 배열
+var panValue = new Array(21); // 가중치 저장용 배열
 var change = 0; // 색깔 변경 용도의 변수
 var color = "black"; // 색깔을 담는 변수
 var role_3_3 = 1; // 3X3 규칙 (ON - 1 / OFF - 0)
 var finish=0; // 게임 종료 판단
 
 for (let i = 0; i < pan.length; i++) { // 2차원 배열 선언을 위한 반복문
-    pan[i] = new Array(20);
-    panValue[i] = new Array(20);
+    pan[i] = new Array(21);
+    panValue[i] = new Array(21);
     for(let j = 0; j <= 19; j++){ // 초기화를 하기 위한 반복문
         pan[i][j]=0;
         panValue[i][j]=0;
