@@ -95,7 +95,7 @@ function uu_f(x,y,v){
         else if(chance==0&&pan[x-i][y]==0){
             chance++;
         }
-        else if(chance==0&&pan[x-i][y]!=0){
+        else if(pan[x-i][y]!=0){
             return -100;
         }
         else{
@@ -114,7 +114,7 @@ function ur_f(x,y,v){
         else if(chance==0&&pan[x-i][y+i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x-i][y+i]!=0){
+        else if(pan[x-i][y+i]!=0){
             return -100;
         }
         else{
@@ -133,7 +133,7 @@ function rr_f(x,y,v){
         else if(chance==0&&pan[x][y+i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x][y+i]!=0){
+        else if(pan[x][y+i]!=0){
             return -100;
         }
         else{
@@ -152,7 +152,7 @@ function dr_f(x,y,v){
         else if(chance==0&&pan[x+i][y+i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x+i][y+i]!=0){
+        else if(pan[x+i][y+i]!=0){
             return -100;
         }
         else{
@@ -171,7 +171,7 @@ function dd_f(x,y,v){
         else if(chance==0&&pan[x+i][y]==0){
             chance++;
         }
-        else if(chance==0&&pan[x+i][y]!=0){
+        else if(pan[x+i][y]!=0){
             return -100;
         }
         else{
@@ -190,7 +190,7 @@ function dl_f(x,y,v){
         else if(chance==0&&pan[x+i][y-i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x+i][y-i]!=0){
+        else if(pan[x+i][y-i]!=0){
             return -100;
         }
         else{
@@ -209,7 +209,7 @@ function ll_f(x,y,v){
         else if(chance==0&&pan[x][y-i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x][y-i]!=0){
+        else if(pan[x][y-i]!=0){
             return -100;
         }
         else{
@@ -228,7 +228,7 @@ function ul_f(x,y,v){
         else if(chance==0&&pan[x-i][y-i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x-i][y-i]!=0){
+        else if(pan[x-i][y-i]!=0){
             return -100;
         }
         else{
@@ -383,6 +383,16 @@ function rule_book(){ // 규칙을 알려주는 모달창을 띄우는 함수
 
 function valueAssignment_2(x,y){ // 가중치 저장하는 함수
     panValue[x][y]=-999; // 다시 선택하지 않도록 값을 줌
+
+    panValue[x-1][y]++; // 여기부터
+    panValue[x-1][y+1]++;
+    panValue[x][y+1]++;
+    panValue[x+1][y+1]++;
+    panValue[x+1][y]++;
+    panValue[x+1][y-1]++;
+    panValue[x][y-1]++;
+    panValue[x-1][y-1]++; // 여기까지 주변에 붙은 부분의 가중치를 좀 더 올림 (더 좋을지는 미지수)
+
     let i=1; // uu, dd
     while(pan[x-i][y]==1&&x-i>0){
         i++;
@@ -495,10 +505,10 @@ function Ocomputer(){ // 가중치에 따라 돌을 놔줌
             }
         }
     }
-    changeColor(); // 내가 두는 돌 판단
+    changeColor(); // 사람이 두는 돌 판단
     for(i=1;i<=19;i++){
         for(j=1;j<=19;j++){
-            if(Ocheck(i,j)==3){ // 상대가 승리
+            if(Ocheck(i,j)==3){ // 사람이 승리
                 changeColor();
                 Oclick(i,j);
                 return;

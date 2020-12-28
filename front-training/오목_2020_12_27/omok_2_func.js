@@ -106,7 +106,7 @@ function uu_f(x,y,v){
         else if(chance==0&&pan[x-i][y]==0){
             chance++;
         }
-        else if(chance==0&&pan[x-i][y]!=0){
+        else if(pan[x-i][y]!=0){
             return -100;
         }
         else{
@@ -125,7 +125,7 @@ function ur_f(x,y,v){
         else if(chance==0&&pan[x-i][y+i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x-i][y+i]!=0){
+        else if(pan[x-i][y+i]!=0){
             return -100;
         }
         else{
@@ -144,7 +144,7 @@ function rr_f(x,y,v){
         else if(chance==0&&pan[x][y+i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x][y+i]!=0){
+        else if(pan[x][y+i]!=0){
             return -100;
         }
         else{
@@ -163,7 +163,7 @@ function dr_f(x,y,v){
         else if(chance==0&&pan[x+i][y+i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x+i][y+i]!=0){
+        else if(pan[x+i][y+i]!=0){
             return -100;
         }
         else{
@@ -182,7 +182,7 @@ function dd_f(x,y,v){
         else if(chance==0&&pan[x+i][y]==0){
             chance++;
         }
-        else if(chance==0&&pan[x+i][y]!=0){
+        else if(pan[x+i][y]!=0){
             return -100;
         }
         else{
@@ -201,7 +201,7 @@ function dl_f(x,y,v){
         else if(chance==0&&pan[x+i][y-i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x+i][y-i]!=0){
+        else if(pan[x+i][y-i]!=0){
             return -100;
         }
         else{
@@ -220,7 +220,7 @@ function ll_f(x,y,v){
         else if(chance==0&&pan[x][y-i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x][y-i]!=0){
+        else if(pan[x][y-i]!=0){
             return -100;
         }
         else{
@@ -239,7 +239,7 @@ function ul_f(x,y,v){
         else if(chance==0&&pan[x-i][y-i]==0){
             chance++;
         }
-        else if(chance==0&&pan[x-i][y-i]!=0){
+        else if(pan[x-i][y-i]!=0){
             return -100;
         }
         else{
