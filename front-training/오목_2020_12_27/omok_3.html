@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="omok_2.css">
     <link rel="icon" href="picture/omok.png" sizes="64x64">
     <script src="omok_3.js"></script>
-    <script src="omok_2_func.js"></script>
-    <title>오목게임 2인용</title>
+    <script src="omok_3_func.js"></script>
+    <title>오목게임 1인용</title>
 </head>
 <body>
     <div>
@@ -413,7 +413,7 @@
     <p class="notice"></p>
     <div class="choice">
         <button onclick="End()" class="end">RESIGN 기권</button>
-        <button onclick="changeColor()" class="pass">PASS 통과</button>
+        <button onclick="changeColor(); Ocomputer()" class="pass">PASS 통과</button>
         <img style="border: 15px solid rgba(236, 218, 179, 0.671); " src="picture/omok.png">
         <span class="role">
             <p>3X3 규칙</p>

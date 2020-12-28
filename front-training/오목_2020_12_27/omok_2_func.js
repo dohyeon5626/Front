@@ -99,6 +99,7 @@ function uu_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(x-i<=0){ return }
         if(pan[x-i][y]==v){
             count++;
         }
@@ -117,6 +118,7 @@ function ur_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(x-i<=0||y+i>=19){ return }
         if(pan[x-i][y+i]==v){
             count++;
         }
@@ -135,6 +137,7 @@ function rr_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(y+i>=19){ return }
         if(pan[x][y+i]==v){
             count++;
         }
@@ -153,6 +156,7 @@ function dr_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(x+i>=19||y+i>=19){ return }
         if(pan[x+i][y+i]==v){
             count++;
         }
@@ -171,6 +175,7 @@ function dd_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(x+i>=19){ return }
         if(pan[x+i][y]==v){
             count++;
         }
@@ -189,6 +194,7 @@ function dl_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(x+i>=19||y-i<=0){ return }
         if(pan[x+i][y-i]==v){
             count++;
         }
@@ -207,6 +213,7 @@ function ll_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(y-i<=0){ return }
         if(pan[x][y-i]==v){
             count++;
         }
@@ -225,6 +232,7 @@ function ul_f(x,y,v){
     let count=0;
     let chance=0;
     for(let i=1;1;i++){
+        if(x-i<=0||y-i<=0){ return }
         if(pan[x-i][y-i]==v){
             count++;
         }
@@ -242,6 +250,7 @@ function ul_f(x,y,v){
 function uu_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(x-i<=0){ return }
         if(pan[x-i][y]==v){
             count++;
         }
@@ -253,6 +262,7 @@ function uu_af(x,y,v){
 function ur_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(x-i<=0||y+i>=19){ return }
         if(pan[x-i][y+i]==v){
             count++;
         }
@@ -264,6 +274,7 @@ function ur_af(x,y,v){
 function rr_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(y+i>=19){ return }
         if(pan[x][y+i]==v){
             count++;
         }
@@ -275,6 +286,7 @@ function rr_af(x,y,v){
 function dr_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(x+i>=19||y+i>=19){ return }
         if(pan[x+i][y+i]==v){
             count++;
         }
@@ -286,6 +298,7 @@ function dr_af(x,y,v){
 function dd_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(x+i>=19){ return }
         if(pan[x+i][y]==v){
             count++;
         }
@@ -297,6 +310,7 @@ function dd_af(x,y,v){
 function dl_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(x+i>=19||y-i<=0){ return }
         if(pan[x+i][y-i]==v){
             count++;
         }
@@ -308,6 +322,7 @@ function dl_af(x,y,v){
 function ll_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(y-i<=0){ return }
         if(pan[x][y-i]==v){
             count++;
         }
@@ -319,6 +334,7 @@ function ll_af(x,y,v){
 function ul_af(x,y,v){
     let count=0;
     for(let i=1;1;i++){
+        if(x-i<=0||y-i<=0){ return }
         if(pan[x-i][y-i]==v){
             count++;
         }

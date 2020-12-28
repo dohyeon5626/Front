@@ -28,7 +28,9 @@ function Oclick(x,y){ // 클릭 이벤트 함수 (x,y 좌표로 값이 들어옴
     }
     if(panCheck == 0){ // 정상
         valueAssignment(x,y);
-        valueAssignment_2(x,y);
+        if(color=="black"){
+            valueAssignment_2(x,y);
+        }
         OPrint(x,y);
         changeColor();
     }
@@ -60,6 +62,6 @@ function Oclick(x,y){ // 클릭 이벤트 함수 (x,y 좌표로 값이 들어옴
         finish=1;
     }
     if(color=="white"){
-    // 컴퓨터가 좌표를 입력해야 함
+        Ocomputer(); // 가중치에 따라 돌을 놔줌
     }
 }
