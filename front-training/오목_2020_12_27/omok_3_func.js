@@ -349,6 +349,7 @@ function replay(){ // 다시 플레이 하기 위한 초기화 함수
     }
     let notice = document.querySelector(".notice");
     notice.innerHTML = "";
+    dolCount=0;
     finish = 0;
 }
 
