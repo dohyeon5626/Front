@@ -513,7 +513,7 @@ function Ocheck_4X4(x,y,v){ // 4*4개를 놓았는지 판단하는 함수
         let dla=dl_f(x,y,v);
         let lla=ll_f(x,y,v);
         let ula=ul_f(x,y,v); // 위에는 3X3 변수
-        if(((uua+dda>=3)+(ura+dla>=3)+(rra+lla>=3)+(dra+ula>=3))>=2&&Ocheck(x,y)==0){
+        if(((uua+dda>=2)+(ura+dla>=2)+(rra+lla>=2)+(dra+ula>=2))>=2&&Ocheck(x,y)==0){
             return 1; // 3
         }
         return 0;
@@ -650,4 +650,15 @@ function Ocomputer(){ // 가중치에 따라 돌을 놔줌
     }
     Oclick(max_x,max_y);
     return;
+}
+function tie(){
+    if(dolCount>=361){
+        var c=document.querySelector("#modal");
+        c.style.display="flex";
+        var c=document.querySelector("#modal > .message");
+        c.innerHTML = "DeadHeat"
+        var c=document.querySelector("#modal > p.people");
+        c.innerHTML = "오목판이 가득찼습니다"
+        finish=1;
+    }
 }

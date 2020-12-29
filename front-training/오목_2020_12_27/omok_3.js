@@ -4,6 +4,7 @@ var change = 0; // 색깔 변경 용도의 변수
 var color = "black"; // 색깔을 담는 변수
 var role_3_3 = 1; // 3X3 규칙 (ON - 1 / OFF - 0)
 var finish=0; // 게임 종료 판단
+var dolCount=0;
 
 for (let i = 0; i < pan.length; i++) { // 2차원 배열 선언을 위한 반복문
     pan[i] = new Array(21);
@@ -32,6 +33,8 @@ function Oclick(x,y){ // 클릭 이벤트 함수 (x,y 좌표로 값이 들어옴
             valueAssignment_2(x,y);
         }
         OPrint(x,y);
+        dolCount++;
+        tie();
         changeColor();
     }
     else if(panCheck == 1){ // 중복
