@@ -467,19 +467,54 @@ function Ocheck_3(x,y,v){ // 3개를 놓았는지 판단하는 함수
         return 0; // 중복
     }
     else{
-        let uua=uu_af(x,y,v);
-        let ura=ur_af(x,y,v);
-        let rra=rr_af(x,y,v);
-        let dra=dr_af(x,y,v);
-        let dda=dd_af(x,y,v);
-        let dla=dl_af(x,y,v);
-        let lla=ll_af(x,y,v);
-        let ula=ul_af(x,y,v); // 위에는 3X3 변수
+        let uua=uu_f(x,y,v);
+        let ura=ur_f(x,y,v);
+        let rra=rr_f(x,y,v);
+        let dra=dr_f(x,y,v);
+        let dda=dd_f(x,y,v);
+        let dla=dl_f(x,y,v);
+        let lla=ll_f(x,y,v);
+        let ula=ul_f(x,y,v); // 위에는 3X3 변수
         if(uua>=3||ura>=3||rra>=3||dra>=3||dda>=3||dla>=3||lla>=3||ula>=3||uua+dda>=3||ura+dla>=3||rra+lla>=3||dra+ula>=3){
             return 1; // 3
         }
-        else if(((uua+dda==2)+(ura+dla==2)+(rra+lla==2)+(dra+ula==2)>=1)+((uua+dda==3)+(ura+dla==3)+(rra+lla==3)+(dra+ula==3)>=1)>=2){
-            return 1; // 4X3
+        return 0;
+    }
+}
+function Ocheck_2(x,y,v){ // 2개를 놓았는지 판단하는 함수
+    if(pan[x][y] != 0){
+        return 0; // 중복
+    }
+    else{
+        let uua=uu_f(x,y,v);
+        let ura=ur_f(x,y,v);
+        let rra=rr_f(x,y,v);
+        let dra=dr_f(x,y,v);
+        let dda=dd_f(x,y,v);
+        let dla=dl_f(x,y,v);
+        let lla=ll_f(x,y,v);
+        let ula=ul_f(x,y,v); // 위에는 3X3 변수
+        if(uua>=2||ura>=2||rra>=2||dra>=2||dda>=2||dla>=2||lla>=2||ula>=2||uua+dda>=2||ura+dla>=2||rra+lla>=2||dra+ula>=2){
+            return 1; // 3
+        }
+        return 0;
+    }
+}
+function Ocheck_4X4(x,y,v){ // 4*4개를 놓았는지 판단하는 함수
+    if(pan[x][y] != 0){
+        return 0; // 중복
+    }
+    else{
+        let uua=uu_f(x,y,v);
+        let ura=ur_f(x,y,v);
+        let rra=rr_f(x,y,v);
+        let dra=dr_f(x,y,v);
+        let dda=dd_f(x,y,v);
+        let dla=dl_f(x,y,v);
+        let lla=ll_f(x,y,v);
+        let ula=ul_f(x,y,v); // 위에는 3X3 변수
+        if(((uua+dda>=3)+(ura+dla>=3)+(rra+lla>=3)+(dra+ula>=3))>=2&&Ocheck(x,y)==0){
+            return 1; // 3
         }
         return 0;
     }
@@ -519,7 +554,7 @@ function Ocomputer(){ // 가중치에 따라 돌을 놔줌
     let max_m_x=-1, max_m_y=-1;
     for(i=1;i<=19;i++){
         for(j=1;j<=19;j++){
-            if(Ocheck_3(i,j,2)==1){ // 내가 3개를 놓음, 4*3을 놓음
+            if(Ocheck_4X4(i,j,2)==1){ // 내가 4*4개를 놓음
                 if(max_m_x==-1&&max_m_y==-1||panValue[max_m_x][max_m_y]<panValue[i][j]){
                     max_m_x=i;
                     max_m_y=j;
@@ -538,7 +573,66 @@ function Ocomputer(){ // 가중치에 따라 돌을 놔줌
     max_m_x=-1, max_m_y=-1;
     for(i=1;i<=19;i++){
         for(j=1;j<=19;j++){
-            if(Ocheck_3(i,j,1)==1){ // 상대가 3개를 놓음, 4*3을 놓음
+            if(Ocheck_4X4(i,j,1)==1){ // 상대가 4*4개를 놓음
+                if(max_m_x==-1&&max_m_y==-1||panValue[max_m_x][max_m_y]<panValue[i][j]){
+                    max_m_x=i;
+                    max_m_y=j;
+                }
+                else if(panValue[max_m_x][max_m_y]==panValue[i][j]&&Math.floor(Math.random()*10)%2==0){
+                    max_m_x=i;
+                    max_m_y=j;
+                }
+            }
+        }
+    }
+    if(max_m_x>=1&&max_m_y>=1){
+        Oclick(max_m_x,max_m_y);
+        return;
+    }
+    max_m_x=-1;
+    max_m_y=-1;
+    for(i=1;i<=19;i++){
+        for(j=1;j<=19;j++){
+            if(Ocheck_3(i,j,2)==1){ // 내가 3개를 놓음
+                if(max_m_x==-1&&max_m_y==-1||panValue[max_m_x][max_m_y]<panValue[i][j]){
+                    max_m_x=i;
+                    max_m_y=j;
+                }
+                else if(panValue[max_m_x][max_m_y]==panValue[i][j]&&Math.floor(Math.random()*10)%2==0){
+                    max_m_x=i;
+                    max_m_y=j;
+                }
+            }
+        }
+    }
+    if(max_m_x>=1&&max_m_y>=1){
+        Oclick(max_m_x,max_m_y);
+        return;
+    }
+    max_m_x=-1, max_m_y=-1;
+    for(i=1;i<=19;i++){
+        for(j=1;j<=19;j++){
+            if(Ocheck_3(i,j,1)==1){ // 상대가 3개를 놓음
+                if(max_m_x==-1&&max_m_y==-1||panValue[max_m_x][max_m_y]<panValue[i][j]){
+                    max_m_x=i;
+                    max_m_y=j;
+                }
+                else if(panValue[max_m_x][max_m_y]==panValue[i][j]&&Math.floor(Math.random()*10)%2==0){
+                    max_m_x=i;
+                    max_m_y=j;
+                }
+            }
+        }
+    }
+    if(max_m_x>=1&&max_m_y>=1){
+        Oclick(max_m_x,max_m_y);
+        return;
+    }
+    max_m_x=-1;
+    max_m_y=-1;
+    for(i=1;i<=19;i++){
+        for(j=1;j<=19;j++){
+            if(Ocheck_3(i,j,2)==1){ // 내가 2개를 놓음
                 if(max_m_x==-1&&max_m_y==-1||panValue[max_m_x][max_m_y]<panValue[i][j]){
                     max_m_x=i;
                     max_m_y=j;
