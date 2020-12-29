@@ -334,7 +334,7 @@ function ul_af(x,y,v){
 }
 
 function replay(){ // 다시 플레이 하기 위한 초기화 함수
-    for (let i = 1; i < pan.length; i++) {
+    for (let i = 1; i <= 19; i++) {
         for(let j = 1; j <= 19; j++){
             pan[i][j]=0;
             panValue[i][j]=0;
