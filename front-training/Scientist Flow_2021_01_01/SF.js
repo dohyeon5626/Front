@@ -1,6 +1,6 @@
 var number=1;
-var P_top=400;
-function Before(){
+var P_top=400; // top의 크기를 얼마나 줄건지 (슬라이드)
+function Before(){ // 슬라이드를 전으로 
     if(number<=1){
         return;
     }
@@ -15,7 +15,7 @@ function Before(){
     }
     check();
 }
-function After(){
+function After(){ // 슬라이드를 후로
     if(number>=35){
         return;
     }
@@ -30,7 +30,7 @@ function After(){
     }
     check();
 }
-function check(){
+function check(){ // 현재 슬라이드의 위치 파악
     if(number>=1&&number<=9){
         var change = document.querySelector(".y16");
         change.style.backgroundColor="gray"
@@ -73,7 +73,7 @@ function check(){
     }
 }
 
-function first_n(){
+function first_n(){ // 처음 들어갈 때 나오는 페이지
     var change=document.querySelector(".first");
     change.style.backgroundColor="rgba(0,0,0,0)";
     setTimeout(function(){
@@ -84,7 +84,7 @@ function first_n(){
     change.style.top="400px";
     check();
 }
-function year_16(){
+function year_16(){ // 중간 중간 중심 슬라이드로 바로가기
     number=1;
     var change=document.querySelector(".buttonBar > p");
     change.innerHTML=number;
@@ -93,7 +93,7 @@ function year_16(){
     change.style.top=P_top+"px";
     check();
 }
-function year_17(){
+function year_17(){ // 중간 중간 중심 슬라이드로 바로가기
     number=10;
     var change=document.querySelector(".buttonBar > p");
     change.innerHTML=number;
@@ -102,7 +102,7 @@ function year_17(){
     change.style.top=P_top+"px";
     check();
 }
-function year_18(){
+function year_18(){ // 중간 중간 중심 슬라이드로 바로가기
     number=14;
     var change=document.querySelector(".buttonBar > p");
     change.innerHTML=number;
@@ -111,7 +111,7 @@ function year_18(){
     change.style.top=P_top+"px";
     check();
 }
-function year_19(){
+function year_19(){ // 중간 중간 중심 슬라이드로 바로가기
     number=24;
     var change=document.querySelector(".buttonBar > p");
     change.innerHTML=number;
