@@ -87,13 +87,6 @@ div.x_19 > button::before {
   height: 15px;
   background-color: black;
 }
-div > div > button:hover {
-  border-radius: 30px;
-  outline: none;
-  border: none;
-  position: relative;
-  background-color: #00000056;
-}
 
 div#modal {
   padding: 0;
