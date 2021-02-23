@@ -57,9 +57,11 @@ function Oclick(x,y){ // 클릭 이벤트 함수 (x,y 좌표로 값이 들어옴
         c.style.display="flex";
         var c=document.querySelector("#modal > p.people");
         if(color == "black"){
+            pan[x][y]=1;
             c.innerHTML = "검은돌이 승리하였습니다";
         }
         else{
+            pan[x][y]=2;
             c.innerHTML = "흰돌이 승리하였습니다";
         }
         finish=1;
