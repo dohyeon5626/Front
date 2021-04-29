@@ -1,11 +1,10 @@
-import { BrowserRouter, Route, ReactDOM, Switch } from 'react-router-dom';
-import React, { useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
 import './App.css';
 import Main from './Main';
 import SecondPage from './SecondPage';
 
 const App = () => {
-
   return (
     <>
       <BrowserRouter>
